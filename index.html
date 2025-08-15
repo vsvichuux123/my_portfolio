@@ -11,31 +11,31 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1a202c; /* Dark background */
-            color: #e2e8f0; /* Light text color */
+            background-color: #1a202c; /* Dark background for the entire page */
+            color: #e2e8f0; /* Light text color for overall readability */
         }
         .section-heading {
-            border-left: 5px solid #6366f1; /* Brighter indigo border for headings (kept) */
+            border-left: 5px solid #6366f1; /* Brighter indigo border for headings */
             padding-left: 1rem;
             animation: fadeIn 1s ease-out; /* Simple fade-in animation for headings */
         }
         .card {
             background-color: #2d3748; /* Slightly lighter dark card background */
             border-radius: 1rem; /* More rounded corners */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15); /* Stronger, darker shadow */
-            padding: 1.75rem; /* Slightly more padding */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15); /* Stronger, darker shadow for depth */
+            padding: 1.75rem; /* Slightly more padding inside cards */
             margin-bottom: 2rem; /* Consistent spacing between sections */
-            transition: transform 0.3s ease-in-out; /* Hover effect */
+            transition: transform 0.3s ease-in-out; /* Smooth hover effect */
         }
         .card:hover {
-            transform: translateY(-5px); /* Lift card on hover */
+            transform: translateY(-5px); /* Lifts the card slightly on hover */
         }
         .icon {
             color: #a78bfa; /* Lighter indigo/purple for icons on dark background */
         }
-        /* Adjust text colors within cards to be light */
+        /* Adjust text colors within cards to be light for contrast */
         .card h1, .card h2, .card h3 {
-            color: #ffffff;
+            color: #ffffff; /* White for primary headings */
         }
         .card p, .card ul li {
             color: #cbd5e0; /* Lighter gray for general text */
@@ -43,26 +43,26 @@
         .card a {
              color: #a78bfa; /* Lighter indigo/purple for links on dark background */
         }
-        .text-indigo-600 { /* For the B.Tech title */
-            color: #818cf8; /* Lighter indigo */
+        .text-indigo-600 { /* Specific style for the B.Tech title in the header */
+            color: #818cf8; /* A lighter indigo for distinction */
         }
-        .text-gray-600 { /* For sub-text like dates, degrees */
-            color: #a0aec0; /* Adjusted for dark theme */
+        .text-gray-600 { /* For sub-text like dates, degrees, etc. */
+            color: #a0aec0; /* Adjusted gray for better visibility in dark theme */
         }
-        .bg-indigo-50 { /* For project descriptions */
-            background-color: #4338ca; /* Darker indigo background for projects */
-            color: #e2e8f0; /* Light text on dark project background */
+        .bg-indigo-50 { /* Background for project descriptions */
+            background-color: #4338ca; /* A darker shade of indigo for subtle contrast */
+            color: #e2e8f0; /* Light text on this darker indigo background */
         }
-        .bg-indigo-50 h3 { /* Project title within dark background */
-            color: #ffffff;
+        .bg-indigo-50 h3 { /* Project title within the indigo background */
+            color: #ffffff; /* White for clear heading */
         }
 
-        /* Adjust "Get in Touch" section for dark theme */
+        /* Styling for the "Get in Touch" section */
         .bg-indigo-600 {
-            background-color: #4f46e5; /* Kept indigo-600, good contrast */
+            background-color: #4f46e5; /* Main indigo background for the section */
         }
         .bg-white { /* Buttons within Get in Touch */
-            background-color: #e2e8f0; /* Light button background */
+            background-color: #e2e8f0; /* Light background for buttons */
             color: #312e81; /* Dark text for light button */
         }
         .hover\:bg-indigo-100:hover { /* Button hover state */
@@ -80,9 +80,10 @@
             color: #a0aec0; /* Lighter gray for footer icons */
         }
         .footer-social-icons a:hover {
-            color: #818cf8; /* Lighter indigo on hover */
+            color: #818cf8; /* Lighter indigo on hover for interaction feedback */
         }
 
+        /* Keyframe animations for subtle entry effects */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -96,132 +97,134 @@
             to { opacity: 1; transform: translateX(0); }
         }
         .header-content {
-            animation: slideInLeft 0.8s ease-out;
+            animation: slideInLeft 0.8s ease-out; /* Animation for the left part of the header */
         }
         .header-contact {
-            animation: slideInRight 0.8s ease-out;
+            animation: slideInRight 0.8s ease-out; /* Animation for the right part of the header */
         }
     </style>
 </head>
 <body>
-<div class="container mx-auto px-4 py-10 max-w-5xl">
+    <div class="container mx-auto px-4 py-10 max-w-5xl">
 
-    <!-- Header Section -->
-    <header class="card flex flex-col md:flex-row items-center justify-between p-8">
-        <!-- Left side: Name and Title -->
-        <div class="text-center md:text-left mb-6 md:mb-0 header-content">
-            <h1 class="text-5xl font-extrabold leading-tight mb-2">VAISHNAV SOORYANARAYANAN</h1>
-            <p class="text-2xl text-indigo-600 font-medium">B.TECH STUDENT - ARTIFICIAL INTELLIGENCE & DATA SCIENCE</p>
-        </div>
-        <!-- Right side: Image and Contact Info -->
-        <div class="flex flex-col items-center md:items-end text-base header-contact">
-            <!-- Placeholder for image -->
-            <img src="IMG_20250626_160427793_HDR_PORTRAIT.jpg" alt="Vaishnav Sooryanarayanan" class="rounded-full w-32 h-32 object-cover mb-4 ring-4 ring-indigo-300 ring-offset-2">
+        <!-- Header Section: Contains name, title, contact info, and profile picture -->
+        <header class="card flex flex-col md:flex-row items-center justify-between p-8">
+            <!-- Left side: Name and Title -->
+            <div class="text-center md:text-left mb-6 md:mb-0 header-content">
+                <!-- Responsive font sizes for the name -->
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-2">VAISHNAV SOORYANARAYANAN</h1>
+                <!-- Responsive font sizes for the title -->
+                <p class="text-lg sm:text-xl lg:text-2xl text-indigo-600 font-medium">B.TECH STUDENT - ARTIFICIAL INTELLIGENCE & DATA SCIENCE</p>
+            </div>
+            <!-- Right side: Image and Contact Info -->
+            <div class="flex flex-col items-center md:items-end text-base header-contact">
+                <!-- Profile image. Updated 'src' attribute to correctly point to the local asset. -->
+                <img src="IMG_20250626_160427793_HDR_PORTRAIT.jpg" alt="Vaishnav Sooryanarayanan" class="rounded-full w-32 h-32 object-cover mb-4 ring-4 ring-indigo-300 ring-offset-2">
 
-            <p class="flex items-center mb-2">
-                <svg class="w-5 h-5 mr-3 icon" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                +917994907980
-            </p>
-            <p class="flex items-center mb-2">
-                <svg class="w-5 h-5 mr-3 icon" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                vaishnavsooryanarayanan@gmail.com
-            </p>
-            <a href="https://www.linkedin.com/in/vaishnav-sooryanarayanan-91661b366/" target="_blank" class="flex items-center font-semibold transition duration-300 ease-in-out">
-                <svg class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.044-1.852-3.044-1.853 0-2.136 1.445-2.136 2.947v5.666H9.593V9.215h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.46V20.452zM5.337 7.433a2.062 2.062 0 01-2.064-2.065 2.062 2.062 0 012.064-2.063 2.064 2.064 0 012.064 2.063 2.062 2.062 0 01-2.064 2.065zm-.006 13.019H2.49v-11.107h2.844v11.107zM22.227 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.456c.98 0 1.772-.773 1.772-1.729V1.729C24 .774 23.208 0 22.227 0z"></path></svg>
-                LinkedIn Profile
-            </a>
-        </div>
-    </header>
+                <p class="flex items-center mb-2">
+                    <svg class="w-5 h-5 mr-3 icon" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                    +917994907980
+                </p>
+                <p class="flex items-center mb-2">
+                    <svg class="w-5 h-5 mr-3 icon" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                    vaishnavsooryanarayanan@gmail.com
+                </p>
+                <a href="https://www.linkedin.com/in/vaishnav-sooryanarayanan-91661b366/" target="_blank" class="flex items-center font-semibold transition duration-300 ease-in-out">
+                    <svg class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.044-1.852-3.044-1.853 0-2.136 1.445-2.136 2.947v5.666H9.593V9.215h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.46V20.452zM5.337 7.433a2.062 2.062 0 01-2.064-2.065 2.062 2.062 0 012.064-2.063 2.064 2.064 0 012.064 2.063 2.062 2.062 0 01-2.064 2.065zm-.006 13.019H2.49v-11.107h2.844v11.107zM22.227 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.456c.98 0 1.772-.773 1.772-1.729V1.729C24 .774 23.208 0 22.227 0z"></path></svg>
+                    LinkedIn Profile
+                </a>
+            </div>
+        </header>
 
-    <!-- Profile Section -->
-    <section class="card">
-        <h2 class="text-3xl font-bold mb-6 section-heading">Profile</h2>
-        <p class="text-lg leading-relaxed">Enthusiastic and driven second-year B.Tech student specializing in Artificial Intelligence and Data Science. Eager to apply theoretical knowledge to real-world projects and collaborate with like-minded individuals. Interested in data analysis, machine learning, and software development.</p>
-    </section>
+        <!-- Profile Section -->
+        <section class="card">
+            <h2 class="text-3xl font-bold mb-6 section-heading">Profile</h2>
+            <p class="text-lg leading-relaxed">Enthusiastic and driven second-year B.Tech student specializing in Artificial Intelligence and Data Science. Eager to apply theoretical knowledge to real-world projects and collaborate with like-minded individuals. Interested in data analysis, machine learning, and software development.</p>
+        </section>
 
-    <!-- Skills Section -->
-    <section class="card">
-        <h2 class="text-3xl font-bold mb-6 section-heading">Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Skills Section -->
+        <section class="card">
+            <h2 class="text-3xl font-bold mb-6 section-heading">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <ul class="list-disc list-inside text-lg space-y-2">
+                    <li>Python & C Programming</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Machine Learning (Beginner)</li>
+                </ul>
+                <ul class="list-disc list-inside text-lg space-y-2">
+                    <li>SQL & Database Management</li>
+                    <li>Web Development (HTML, CSS, JS)</li>
+                    <li>Team Collaboration</li>
+                    <li>Critical Thinking</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="card">
+            <h2 class="text-3xl font-bold mb-6 section-heading">Certifications</h2>
             <ul class="list-disc list-inside text-lg space-y-2">
-                <li>Python & C Programming</li>
-                <li>Data Structures and Algorithms</li>
-                <li>Machine Learning (Beginner)</li>
+                <li>Python Programming and Web Development</li>
+                <li>The Joy of Computing Using Python</li>
+                <li>English Language for Competitive Exams</li>
+                <li>One-day workshop on Blockchain Technology</li>
             </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section class="card">
+            <h2 class="text-3xl font-bold mb-6 section-heading">Education</h2>
+            <p class="text-lg mb-1"><strong>B.Tech in Artificial Intelligence and Data Science</strong></p>
+            <p class="text-md mb-1">Sreepathy Institute of Management And Technology | 2023-2027</p>
+            <p class="text-md">Current CGPA: 8.27/10</p>
+        </section>
+
+        <!-- Languages Section -->
+        <section class="card">
+            <h2 class="text-3xl font-bold mb-6 section-heading">Languages</h2>
             <ul class="list-disc list-inside text-lg space-y-2">
-                <li>SQL & Database Management</li>
-                <li>Web Development (HTML, CSS, JS)</li>
-                <li>Team Collaboration</li>
-                <li>Critical Thinking</li>
+                <li>Malayalam (Fluent)</li>
+                <li>English (Fluent)</li>
+                <li>Tamil (Beginner)</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <!-- Certifications Section -->
-    <section class="card">
-        <h2 class="text-3xl font-bold mb-6 section-heading">Certifications</h2>
-        <ul class="list-disc list-inside text-lg space-y-2">
-            <li>Python Programming and Web Development</li>
-            <li>The Joy of Computing Using Python</li>
-            <li>English Language for Competitive Exams</li>
-            <li>One-day workshop on Blockchain Technology</li>
-        </ul>
-    </section>
+        <!-- Interests Section -->
+        <section class="card">
+            <h2 class="text-3xl font-bold mb-6 section-heading">Interests</h2>
+            <ul class="list-disc list-inside text-lg space-y-2">
+                <li>Exploring AI tools and automation</li>
+                <li>Watching tech documentaries</li>
+            </ul>
+        </section>
 
-    <!-- Education Section -->
-    <section class="card">
-        <h2 class="text-3xl font-bold mb-6 section-heading">Education</h2>
-        <p class="text-lg mb-1"><strong>B.Tech in Artificial Intelligence and Data Science</strong></p>
-        <p class="text-md mb-1">Sreepathy Institute of Management And Technology | 2023-2027</p>
-        <p class="text-md">Current CGPA: 8.27/10</p>
-    </section>
+        <!-- Get in Touch Section -->
+        <section class="card text-center bg-indigo-600 text-white">
+            <h2 class="text-4xl font-extrabold mb-6">Get in Touch!</h2>
+            <p class="text-xl mb-6">Have a project idea or just want to chat? Feel free to reach out!</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="mailto:vaishnavsooryanarayanan@gmail.com" class="bg-white text-indigo-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-100 transition duration-300 ease-in-out transform hover:scale-105 flex items-center">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/vaishnav-sooryanarayanan-91661b366/" target="_blank" class="bg-white text-indigo-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-100 transition duration-300 ease-in-out transform hover:scale-105 flex items-center">
+                    <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.044-1.852-3.044-1.853 0-2.136 1.445-2.136 2.947v5.666H9.593V9.215h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.46V20.452zM5.337 7.433a2.062 2.062 0 01-2.064-2.065 2.062 2.062 0 012.064-2.063 2.064 2.064 0 012.064 2.063 2.062 2.062 0 01-2.064 2.065zm-.006 13.019H2.49v-11.107h2.844v11.107zM22.227 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.456c.98 0 1.772-.773 1.772-1.729V1.729C24 .774 23.208 0 22.227 0z"></path></svg>
+                    LinkedIn
+                </a>
+            </div>
+        </section>
 
-    <!-- Languages Section -->
-    <section class="card">
-        <h2 class="text-3xl font-bold mb-6 section-heading">Languages</h2>
-        <ul class="list-disc list-inside text-lg space-y-2">
-            <li>Malayalam (Fluent)</li>
-            <li>English (Fluent)</li>
-            <li>Tamil (Beginner)</li>
-        </ul>
-    </section>
-
-    <!-- Interests Section -->
-    <section class="card">
-        <h2 class="text-3xl font-bold mb-6 section-heading">Interests</h2>
-        <ul class="list-disc list-inside text-lg space-y-2">
-            <li>Exploring AI tools and automation</li>
-            <li>Watching tech documentaries</li>
-        </ul>
-    </section>
-
-    <!-- Get in Touch Section -->
-    <section class="card text-center bg-indigo-600 text-white">
-        <h2 class="text-4xl font-extrabold mb-6">Get in Touch!</h2>
-        <p class="text-xl mb-6">Have a project idea or just want to chat? Feel free to reach out!</p>
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href="mailto:vaishnavsooryanarayanan@gmail.com" class="bg-white text-indigo-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-100 transition duration-300 ease-in-out transform hover:scale-105 flex items-center">
-                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                Email Me
-            </a>
-            <a href="https://www.linkedin.com/in/vaishnav-sooryanarayanan-91661b366/" target="_blank" class="bg-white text-indigo-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-100 transition duration-300 ease-in-out transform hover:scale-105 flex items-center">
-                <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.044-1.852-3.044-1.853 0-2.136 1.445-2.136 2.947v5.666H9.593V9.215h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.46V20.452zM5.337 7.433a2.062 2.062 0 01-2.064-2.065 2.062 2.062 0 012.064-2.063 2.064 2.064 0 012.064 2.063 2.062 2.062 0 01-2.064 2.065zm-.006 13.019H2.49v-11.107h2.844v11.107zM22.227 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.456c.98 0 1.772-.773 1.772-1.729V1.729C24 .774 23.208 0 22.227 0z"></path></svg>
-                LinkedIn
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="text-center text-sm mt-10">
-        <div class="flex justify-center space-x-6 mb-4 footer-social-icons">
-            <!-- LinkedIn Icon -->
-            <a href="https://www.linkedin.com/in/vaishnav-sooryanarayanan-91661b366/" target="_blank" class="hover:text-indigo-600 transition duration-300 ease-in-out">
-                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.044-1.852-3.044-1.853 0-2.136 1.445-2.136 2.947v5.666H9.593V9.215h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.46V20.452zM5.337 7.433a2.062 2.062 0 01-2.064-2.065 2.062 2.062 0 012.064-2.063 2.064 2.064 0 012.064 2.063 2.062 2.062 0 01-2.064 2.065zm-.006 13.019H2.49v-11.107h2.844v11.107zM22.227 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.456c.98 0 1.772-.773 1.772-1.729V1.729C24 .774 23.208 0 22.227 0z"></path></svg>
-            </a>
-            <!-- GitHub Icon -->
-            <a href="https://github.com/vsvichuux123" target="_blank" class="hover:text-indigo-600 transition duration-300 ease-in-out">
-                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017 2 16.052 4.566 19.59 8.164 20.803c.4.074.547-.174.547-.386 0-.19-.007-.698-.01-1.362-2.223.483-2.69-1.077-2.69-1.077-.363-.923-.883-1.17-.883-1.17-.723-.497.054-.486.054-.486.802.057 1.224.823 1.224.823.714 1.227 1.867.873 2.32.667.072-.519.278-.873.504-1.074-1.776-.202-3.644-.888-3.644-3.953 0-.875.312-1.594.823-2.153-.082-.202-.357-1.015.077-2.126 0 0 .67-.215 2.2.823.638-.176 1.32-.264 2.007-.267.687.003 1.368.091 2.007.267 1.53-1.038 2.2-.823 2.2-.823.435 1.11.16 1.924.078 2.126.512.56.823 1.278.823 2.153 0 3.072-1.871 3.748-3.653 3.946.287.248.543.747.543 1.503 0 1.074-.01 1.94-.01 2.203 0 .214.144.464.55.385C19.436 19.59 22 16.052 22 12.017 22 6.484 17.523 2 12 2Z" clip-rule="evenodd" />
+        <!-- Footer Section -->
+        <footer class="text-center text-sm mt-10">
+            <div class="flex justify-center space-x-6 mb-4 footer-social-icons">
+                <!-- LinkedIn Icon -->
+                <a href="https://www.linkedin.com/in/vaishnav-sooryanarayanan-91661b366/" target="_blank" class="hover:text-indigo-600 transition duration-300 ease-in-out">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.044-1.852-3.044-1.853 0-2.136 1.445-2.136 2.947v5.666H9.593V9.215h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.46V20.452zM5.337 7.433a2.062 2.062 0 01-2.064-2.065 2.062 2.062 0 012.064-2.063 2.064 2.064 0 012.064 2.063 2.062 2.062 0 01-2.064 2.065zm-.006 13.019H2.49v-11.107h2.844v11.107zM22.227 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.456c.98 0 1.772-.773 1.772-1.729V1.729C24 .774 23.208 0 22.227 0z"></path></svg>
+                </a>
+                <!-- GitHub Icon -->
+                <a href="https://github.com/vsvichuux123" target="_blank" class="hover:text-indigo-600 transition duration-300 ease-in-out">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017 2 16.052 4.566 19.59 8.164 20.803c.4.074.547-.174.547-.386 0-.19-.007-.698-.01-1.362-2.223.483-2.69-1.077-2.69-1.077-.363-.923-.883-1.17-.883-1.17-.723-.497.054-.486.054-.486.802.057 1.224.823 1.224.823.714 1.227 1.867.873 2.32.667.072-.519.278-.873.504-1.074-1.776-.202-3.644-.888-3.644-3.953 0-.875.312-1.594.823-2.153-.082-.202-.357-1.015.077-2.126 0 0 .67-.215 2.2.823.638-.176 1.32-.264 2.007-.267.687.003 1.368.091 2.007.267 1.53-1.038 2.2-.823 2.2-.823.435 1.11.16 1.924.078 2.126.512.56.823 1.278.823 2.153 0 3.072-1.871 3.748-3.653 3.946.287.248.543.747.543 1.503 0 1.074-.01 1.94-.01 2.203 0 .214.144.464.55.385C19.436 19.59 22 16.052 22 12.017 22 6.484 17.523 2 12 2Z" clip-rule="evenodd" />
                 </svg>
             </a>
             <!-- Instagram Icon -->
